@@ -1,8 +1,11 @@
 name: Publish to npm
 
-# Publishes the package to npmjs. Triggered by publishing a GitHub Release
-# (draft a release with the version as its tag, e.g. v0.1.0) or manually.
-# Requires an NPM_TOKEN secret with publish rights on the package name.
+# Publishes the package to npmjs via Trusted Publishing (OIDC): no NPM_TOKEN
+# secret — GitHub Actions authenticates to npm with an OIDC token, and npm
+# trusts this exact workflow file (the "Trusted Publisher" row configured on
+# the package's npmjs Settings page must match: publisher "GitHub Actions",
+# org/user, repository, and this filename, publish.yml).
+# Triggered by publishing a GitHub Release (tag e.g. v0.1.1) or manually.
 on:
   release:
     types: [published]
@@ -13,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      id-token: write # OIDC token for npm trusted publishing + provenance
     steps:
       - uses: actions/checkout@v4
 
@@ -35,6 +39,4 @@ jobs:
         run: node test/detection.test.mjs
 
       - name: Publish
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public --provenance

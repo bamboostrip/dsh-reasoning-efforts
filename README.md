@@ -11,6 +11,8 @@ from a Settings page instead of hand-editing `settings.yaml`.
 > detection that fills context / output capacities and lists models the
 > provider advertises but you have not configured yet.
 
+![示例截图](docs/images/reasoning.png)
+
 ## How it works
 
 The client half is a Web Client settings page driving the official client wire
