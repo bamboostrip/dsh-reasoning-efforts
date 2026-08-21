@@ -5,10 +5,12 @@ name: Publish to npm
 # trusts this exact workflow file (the "Trusted Publisher" row configured on
 # the package's npmjs Settings page must match: publisher "GitHub Actions",
 # org/user, repository, and this filename, publish.yml).
-# Triggered by publishing a GitHub Release (tag e.g. v0.1.1) or manually.
+# Triggered by pushing a version tag (v*). Note: creating a GitHub Release
+# from that tag does NOT re-trigger this workflow (no duplicate publishes).
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - 'v*'
   workflow_dispatch:
 
 jobs:
