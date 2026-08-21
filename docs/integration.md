@@ -122,9 +122,11 @@ declares `dsh.bundle.patch: ./cordis.patch.yml`, whose `insert:` row mounts
 `dsh plugin` command:
 
 ```bash
-dsh plugin --profile web add link:<this repo path>   # local
+dsh plugin --profile web add dsh-reasoning-efforts                      # npm (recommended)
 # or
-dsh plugin --profile web add dsh-reasoning-efforts      # published
+dsh plugin --profile web add github:bamboostrip/dsh-reasoning-efforts   # GitHub
+# or
+dsh plugin --profile web add link:<this repo path>                      # local
 ```
 
 `dsh plugin` runs pnpm in `$DSH_HOME/profiles/web` and auto-reconciles

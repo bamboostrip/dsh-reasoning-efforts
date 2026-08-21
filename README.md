@@ -58,37 +58,34 @@ pnpm typecheck  # optional
 pnpm test       # builds + runs detection unit tests
 ```
 
-## Install (the `dsh plugin` way)
+## Install
 
-DSH plugins are managed with the `dsh plugin` command, which installs a package
-into the target profile (via pnpm) and, if it declares `dsh.bundle`, mounts it
-as a profile layer automatically.
+**From npm (recommended):**
 
-**Local install from this checkout** (recommended for testing):
+```bash
+dsh plugin --profile web add dsh-reasoning-efforts
+```
+
+**From GitHub:**
+
+```bash
+dsh plugin --profile web add github:bamboostrip/dsh-reasoning-efforts
+```
+
+**From a local checkout** (development):
 
 ```bash
 cd /path/to/dsh-reasoning-efforts   # the invoking directory anchors relative paths
 dsh plugin --profile web add link:.
 ```
 
-or with an absolute path:
-
-```bash
-dsh plugin --profile web add link:D:\AllCode\dsh\dsh-thinking-levels
-```
-
-**Published/tarball install:**
-
-```bash
-pnpm pack                        # -> dsh-reasoning-efforts-0.1.0.tgz
-dsh plugin --profile web add ./dsh-reasoning-efforts-0.1.0.tgz
-```
-
-`dsh plugin` runs pnpm in the profile directory
-(`$DSH_HOME/profiles/web`), then reconciles `dsh.profile.bundles` — the package
-declares `dsh.bundle.patch: ./cordis.patch.yml`, so it joins the layer stack and
-its `insert:` row mounts the plugin. **A DSH restart (or reload) is required for
-a cordis.yml/profile-layer plugin to load.**
+DSH plugins are managed with the `dsh plugin` command, which installs a package
+into the target profile (via pnpm) and, if it declares `dsh.bundle`, mounts it
+as a profile layer automatically. `dsh plugin` runs pnpm in the profile
+directory (`$DSH_HOME/profiles/web`), then reconciles `dsh.profile.bundles` —
+this package declares `dsh.bundle.patch: ./cordis.patch.yml`, so it joins the
+layer stack and its `insert:` row mounts the plugin. **A DSH restart (or
+reload) is required for the plugin to load.**
 
 ## Uninstall (no residue)
 

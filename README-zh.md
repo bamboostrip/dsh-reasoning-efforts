@@ -50,41 +50,32 @@ pnpm typecheck  # 可选
 pnpm test       # 构建 + 运行检测单元测试
 ```
 
-## 安装（`dsh plugin` 方式）
+## 安装
 
-DSH 插件用 `dsh plugin` 命令管理：它把包安装进目标 profile（通过 pnpm），声明了
-`dsh.bundle` 的包会自动挂载为 profile 层。
+**从 npm 安装（推荐）：**
 
-**从本地仓库安装**（测试推荐）：
+```bash
+dsh plugin --profile web add dsh-reasoning-efforts
+```
+
+**从 GitHub 安装：**
+
+```bash
+dsh plugin --profile web add github:bamboostrip/dsh-reasoning-efforts
+```
+
+**从本地仓库安装**（开发调试）：
 
 ```bash
 cd /path/to/dsh-reasoning-efforts   # 相对路径以调用目录为锚点
 dsh plugin --profile web add link:.
 ```
 
-或使用绝对路径：
-
-```bash
-dsh plugin --profile web add link:D:\AllCode\dsh\dsh-thinking-levels
-```
-
-**从 npm / tarball 安装：**
-
-```bash
-pnpm pack                        # -> dsh-reasoning-efforts-0.1.1.tgz
-dsh plugin --profile web add ./dsh-reasoning-efforts-0.1.1.tgz
-```
-
-或直接：
-
-```bash
-dsh plugin --profile web add dsh-reasoning-efforts
-```
-
-`dsh plugin` 在 profile 目录（`$DSH_HOME/profiles/web`）运行 pnpm，然后对账
-`dsh.profile.bundles` —— 包声明了 `dsh.bundle.patch: ./cordis.patch.yml`，因此
-自动加入层叠，其 `insert:` 行挂载插件。**cordis.yml / profile 层插件的加载需要
-重启（或 reload）DSH。**
+DSH 插件用 `dsh plugin` 命令管理：它把包安装进目标 profile（通过 pnpm），声明了
+`dsh.bundle` 的包会自动挂载为 profile 层。`dsh plugin` 在 profile 目录
+（`$DSH_HOME/profiles/web`）运行 pnpm，然后对账 `dsh.profile.bundles` —— 本包声明了
+`dsh.bundle.patch: ./cordis.patch.yml`，因此自动加入层叠，其 `insert:` 行挂载插件。
+**插件加载需要重启（或 reload）DSH。**
 
 ## 卸载（无残留）
 
