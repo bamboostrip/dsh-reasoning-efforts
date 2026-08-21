@@ -1,6 +1,6 @@
 {
   "name": "dsh-reasoning-efforts",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DSH plugin: auto-detect thinking levels (reasoningEfforts) for custom models in llm-pi-ai settings.",
   "type": "module",
   "packageManager": "pnpm@11.22.0",
