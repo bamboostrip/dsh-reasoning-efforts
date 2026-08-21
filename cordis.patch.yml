@@ -1,0 +1,9 @@
+# Bundle patch for the dsh-thinking-levels plugin: inserts its plugin row into
+# the DSH profile roster. Applied automatically as a profile bundle layer via
+# the `dsh.bundle.patch` manifest field.
+#
+# Install with `dsh plugin --profile web add dsh-thinking-levels` (published
+# npm/tarball) or `dsh plugin --profile web add link:<this repo path>` (local).
+- insert:
+    - id: dsh-thinking-levels
+      name: dsh-thinking-levels
