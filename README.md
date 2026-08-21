@@ -1,4 +1,4 @@
-# dsh-thinking-levels
+# dsh-reasoning-efforts
 
 DSH plugin that **configures thinking levels (`reasoningEfforts`) for custom
 models** added under the `llm-pi-ai` settings namespace, so you can edit them
@@ -63,7 +63,7 @@ as a profile layer automatically.
 **Local install from this checkout** (recommended for testing):
 
 ```bash
-cd /path/to/dsh-thinking-levels   # the invoking directory anchors relative paths
+cd /path/to/dsh-reasoning-efforts   # the invoking directory anchors relative paths
 dsh plugin --profile web add link:.
 ```
 
@@ -76,8 +76,8 @@ dsh plugin --profile web add link:D:\AllCode\dsh\dsh-thinking-levels
 **Published/tarball install:**
 
 ```bash
-pnpm pack                        # -> dsh-thinking-levels-0.1.0.tgz
-dsh plugin --profile web add ./dsh-thinking-levels-0.1.0.tgz
+pnpm pack                        # -> dsh-reasoning-efforts-0.1.0.tgz
+dsh plugin --profile web add ./dsh-reasoning-efforts-0.1.0.tgz
 ```
 
 `dsh plugin` runs pnpm in the profile directory
@@ -88,7 +88,7 @@ a cordis.yml/profile-layer plugin to load.**
 
 ## Uninstall (no residue)
 
-1. Remove the `dsh-thinking-levels` row from your composition / uninstall the
+1. Remove the `dsh-reasoning-efforts` row from your composition / uninstall the
    package from Plugins settings.
 2. Optionally remove `reasoningEfforts` lines you no longer want from the
    `llm-pi-ai` section of your `settings.yaml` (this plugin only writes what you

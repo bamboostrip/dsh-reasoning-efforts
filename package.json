@@ -1,5 +1,5 @@
 {
-  "name": "dsh-thinking-levels",
+  "name": "dsh-reasoning-efforts",
   "version": "0.1.0",
   "description": "DSH plugin: auto-detect thinking levels (reasoningEfforts) for custom models in llm-pi-ai settings.",
   "type": "module",
@@ -42,12 +42,12 @@
   "author": "hank reed (bamboostrip)",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/bamboostrip/dsh-thinking-levels.git"
+    "url": "git+ssh://git@github.com/bamboostrip/dsh-reasoning-efforts.git"
   },
   "bugs": {
-    "url": "https://github.com/bamboostrip/dsh-thinking-levels/issues"
+    "url": "https://github.com/bamboostrip/dsh-reasoning-efforts/issues"
   },
-  "homepage": "https://github.com/bamboostrip/dsh-thinking-levels#readme",
+  "homepage": "https://github.com/bamboostrip/dsh-reasoning-efforts#readme",
   "engines": {
     "node": ">=22.13"
   },

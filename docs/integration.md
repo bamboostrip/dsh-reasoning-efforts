@@ -118,13 +118,13 @@ artifact (the web shell serves it as a classic script); platform modules
 
 See [`../README.md`](../README.md). The plugin is a real DSH **bundle**: it
 declares `dsh.bundle.patch: ./cordis.patch.yml`, whose `insert:` row mounts
-`dsh-thinking-levels` into the profile roster. Install with the official
+`dsh-reasoning-efforts` into the profile roster. Install with the official
 `dsh plugin` command:
 
 ```bash
 dsh plugin --profile web add link:<this repo path>   # local
 # or
-dsh plugin --profile web add dsh-thinking-levels       # published
+dsh plugin --profile web add dsh-reasoning-efforts      # published
 ```
 
 `dsh plugin` runs pnpm in `$DSH_HOME/profiles/web` and auto-reconciles
@@ -132,7 +132,7 @@ dsh plugin --profile web add dsh-thinking-levels       # published
 automatically. Uninstall removes the row and the dependency:
 
 ```bash
-dsh plugin --profile web remove dsh-thinking-levels
+dsh plugin --profile web remove dsh-reasoning-efforts
 ```
 
 The plugin never edits `cordis.yml` or anything outside the `llm-pi-ai` settings

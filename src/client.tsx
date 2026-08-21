@@ -744,7 +744,7 @@ export function apply(ctx: ClientContext): void {
     const t = locale?.bind(LOCALE_NS) ?? fallbackT
 
     const style = document.createElement('style')
-    style.dataset.plugin = 'dsh-thinking-levels'
+    style.dataset.plugin = 'dsh-reasoning-efforts'
     style.textContent = CSS
     document.head.appendChild(style)
     const api = ctx.get('connection')?.api
@@ -776,4 +776,4 @@ export function apply(ctx: ClientContext): void {
 
 /** Required services: the connection (settings wire), the slot system, and the locale registry. */
 export const inject = ['connection', 'slots', 'locale']
-export const name = 'dsh-thinking-levels'
+export const name = 'dsh-reasoning-efforts'

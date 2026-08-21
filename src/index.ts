@@ -179,4 +179,4 @@ export function apply(ctx: Context): void {
 }
 
 export const inject = ['settings', 'webServer']
-export const name = 'dsh-thinking-levels'
+export const name = 'dsh-reasoning-efforts'

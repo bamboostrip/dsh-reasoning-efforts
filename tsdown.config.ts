@@ -1,5 +1,5 @@
 /**
- * tsdown build for dsh-thinking-levels, mirroring the official DSH
+ * tsdown build for dsh-reasoning-efforts, mirroring the official DSH
  * client-bundle preset (packages/client/tsdown.client.ts shape):
  *
  *  - node half: src/index.ts → dist/index.js (ESM, no-op apply)
@@ -12,7 +12,7 @@
  */
 import { defineConfig } from 'tsdown'
 
-const PLUGIN_ID = 'dsh-thinking-levels'
+const PLUGIN_ID = 'dsh-reasoning-efforts'
 
 /**
  * Module specifiers the web shell shares into the frozen module table (the
