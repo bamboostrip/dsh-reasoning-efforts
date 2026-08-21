@@ -1,3 +1,5 @@
+English | [简体中文](README-zh.md)
+
 # dsh-reasoning-efforts
 
 DSH plugin that **configures thinking levels (`reasoningEfforts`) for custom

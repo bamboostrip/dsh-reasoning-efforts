@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1 (2026-08-21)
+
+- README 中英双语（`README.md` / `README-zh.md`，顶部互链切换）
+- npm 发布改为 Trusted Publishing（OIDC 免 token）：workflow 更名为 `publish.yml`，`id-token: write` + `--provenance`
+- README 增加示例截图
+
 ## 0.1.0 (2026-08-21)
 
 首个版本。
